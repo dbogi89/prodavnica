@@ -1,0 +1,38 @@
+{
+    "name": "Kupac",
+    "fields": [
+        {
+            "fieldName": "nazivKupca",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pib",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "adresa",
+            "otherEntityRelationshipName": "kupac",
+            "relationshipName": "adresa",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "racun",
+            "otherEntityRelationshipName": "kupac",
+            "relationshipName": "racun"
+        }
+    ],
+    "changelogDate": "20190612003742",
+    "entityTableName": "kupac",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
