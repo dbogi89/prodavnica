@@ -1,0 +1,55 @@
+entity Artikal {
+	imeArtikla String
+    barKod String 
+    cena Double
+}
+
+entity Kupac {
+	nazivKupca String
+    pib String
+    
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Racun {
+	brojRacuna String,
+	datum LocalDate,
+	
+}
+entity Adresa {
+ulica String
+ptt Long
+}
+
+entity RacunStavke {
+	redniBrojStavke Integer required
+    kolicina Integer
+}
+
+
+relationship OneToOne {
+	Kupac{adresa} to Adresa
+}
+
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Kupac{racun} to Racun,
+	Racun {racunStavke} to RacunStavke
+    Artikal{racunStavke} to RacunStavke
+}
+
+
+
+paginate Artikal, Kupac with infinite-scroll
+paginate Racun with pagination
+
+// Use Data Transfert Objects (DTO)
+ dto * with mapstruct except Artikal, Kupac
+
+// Set service options to all except few
+service all with serviceImpl 
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

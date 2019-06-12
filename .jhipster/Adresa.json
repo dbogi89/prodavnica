@@ -1,0 +1,23 @@
+{
+    "name": "Adresa",
+    "fields": [
+        {
+            "fieldName": "ulica",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ptt",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190612004130",
+    "entityTableName": "adresa",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

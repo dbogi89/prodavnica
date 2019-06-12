@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity RacunStavke.
+    -->
+    <changeSet id="20190612004131-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="artikal_id"
+                                 baseTableName="racun_stavke"
+                                 constraintName="fk_racun_stavke_artikal_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="artikal"/>
+
+        <addForeignKeyConstraint baseColumnNames="racun_id"
+                                 baseTableName="racun_stavke"
+                                 constraintName="fk_racun_stavke_racun_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="racun"/>
+
+    </changeSet>
+</databaseChangeLog>
