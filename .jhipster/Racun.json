@@ -1,0 +1,37 @@
+{
+    "name": "Racun",
+    "fields": [
+        {
+            "fieldName": "brojRacuna",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "datum",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "kupac",
+            "otherEntityName": "kupac",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "racunStavke",
+            "otherEntityRelationshipName": "racun",
+            "relationshipName": "racunStavke"
+        }
+    ],
+    "changelogDate": "20190612003743",
+    "javadoc": "not an ignored comment",
+    "entityTableName": "racun",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

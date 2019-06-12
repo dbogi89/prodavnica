@@ -1,0 +1,34 @@
+{
+    "name": "Artikal",
+    "fields": [
+        {
+            "fieldName": "imeArtikla",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "barKod",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cena",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "racunStavke",
+            "otherEntityRelationshipName": "artikal",
+            "relationshipName": "racunStavke"
+        }
+    ],
+    "changelogDate": "20190612003741",
+    "entityTableName": "artikal",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
